@@ -1,0 +1,40 @@
+{
+  "name": "send_mail",
+  "version": "0.0.1",
+  "description": "SMTP Mail Handler",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcuswoy/sendmail.git"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "tsc && webpack",
+    "clean": "rm -rf ./build",
+    "prepublish": "npm run clean && npm run build",
+    "test": "mocha --import=tsimp/import 'tests/**/*.ts'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.7",
+    "@types/nodemailer": "^6.4.14",
+    "assert": "^2.1.0",
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsimp": "^2.0.11",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "author": "Marcus Woyciechowski",
+  "license": "MIT"
+}
